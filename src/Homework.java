@@ -13,13 +13,15 @@ public class Homework {
 
   public static void main(String[] args) throws IOException {
     BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-    System.out.print("Enter your number : ");
+    System.out.print("Ввидите целое число : ");
     try {
       int number = Integer.parseInt(br.readLine());
+      System.out.print("бинарное значение числа "+number+" равно ");
       System.out.println(decToBin(number));
     } catch (NumberFormatException e) {
       System.out.println("Неправильный формат целого числа: " + e.getMessage());
     }
+
   }
 
 
@@ -34,6 +36,7 @@ public class Homework {
     while (number != 0) { // пока в числе есть цифры
       int digit = number % RADIX;// // последняя цифра - остаток от деления на основание (2)
       number /= RADIX;// сам остаток от числа делим на основание (2)
+
       str = digit + str;// digit-вписываем как первую цифру в нашу строку, и это всё повторяем пока number !=0.
 
     }
