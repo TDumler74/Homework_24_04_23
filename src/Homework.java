@@ -16,7 +16,7 @@ public class Homework {
     System.out.print("Ввидите целое число : ");
     try {
       int number = Integer.parseInt(br.readLine());
-      System.out.print("бинарное значение числа "+number+" равно ");
+      System.out.print("бинарное значение числа " + number + " равно ");
       System.out.println(decToBin(number));
     } catch (NumberFormatException e) {
       System.out.println("Неправильный формат целого числа: " + e.getMessage());
